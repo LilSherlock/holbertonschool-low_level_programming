@@ -1,14 +1,17 @@
 #include <stdio.h>
-
+/**
+ * main - main
+ * Return: 0
+ */
 int main(void)
 {
-    int number = 0;
+	int number = 0;
 
-    while(number < 10)
-    {
-        printf("%d", number);
-        number++;
-    }
-    putchar('\n');
-    return (0);
+	while (number < 10)
+	{
+		printf("%d", number);
+		number++;
+	}
+	putchar('\n');
+	return (0);
 }
