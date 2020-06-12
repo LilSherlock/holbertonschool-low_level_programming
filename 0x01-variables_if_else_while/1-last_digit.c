@@ -1,29 +1,27 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <time.h>
+#include <stdio.h>
+
 /**
- * main - main
- * Return: 0
+ * main - gets random number, and gets last digit of it
+ *
+ * Description: uses rand for random number, and divides abs value to get last
+ * Return: returns 0
  */
 int main(void)
 {
-	int n, lastDigit;
+	int n, j;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	lastDigit = n % 10;
-	if (lastDigit > 5)
-	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, lastDigit);
-	}
-	else if (lastDigit < 0)
-	{
-		printf("Last digit of %d is %d and and is less than 6 and not 0\n", n,
-		lastDigit);
-	}
-	else if (lastDigit == 0)
-	{
-		printf("Last digit of %d is %d and and is 0\n", n, lastDigit);
-	}
+	j = n;
+	n %= 10;
+	printf("Last digit of %i is %i ", j, n);
+	if (n > 5)
+		printf("and is greater than 5\n");
+	else if (n < 6 && n != 0)
+		printf("and is less than 6 and not 0\n");
+	else
+		printf("and is 0\n");
 	return (0);
 }
