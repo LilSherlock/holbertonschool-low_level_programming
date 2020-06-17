@@ -1,10 +1,16 @@
 #include "holberton.h"
 
-int _abs(int a)
+/**
+ * _abs - compute the absolute value of a given number
+ * @i: integer to compute absolute number
+ *
+ * Return: absolute value of the input number.
+ */
+int _abs(int i)
 {
-	if (a < 0)
-	{
-		a = (a * (-1));
-	}
-	return (a);
+	if (i < 0)
+		i = -i;
+	if (i >= 0)
+		i = i;
+	return (i);
 }
