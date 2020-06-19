@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * _isupper - checks for upper letters
- * Return: the absolute value of an integer
+ * _isdigit - checks for digits
+ * Return: 1 if digit 0 otherwise
  * @c: number to be proccesed
  */
 int _isdigit(int c)
@@ -11,7 +11,5 @@ int _isdigit(int c)
 		return (1);
 	}
 	else
-	{
 		return (0);
-	}
 }
