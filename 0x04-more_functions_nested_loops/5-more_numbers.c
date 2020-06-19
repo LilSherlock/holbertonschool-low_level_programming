@@ -22,7 +22,7 @@ void more_numbers(void)
 				numbers++;
 			}
 			numbers = 0;
-			_putchar('\n');
+			printf("\n");
 			repeater++;
 		}
 	}
