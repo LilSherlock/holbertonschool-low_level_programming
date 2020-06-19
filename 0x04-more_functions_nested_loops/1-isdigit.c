@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * _isdigit - main
- * @c: caracter
- * Return: 1 or 0
+ * _isupper - checks for upper letters
+ * Return: the absolute value of an integer
+ * @c: number to be proccesed
  */
 int _isdigit(int c)
 {
