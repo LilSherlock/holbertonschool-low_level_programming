@@ -18,7 +18,7 @@ void print_square(int size)
 			tap++;
 		}
 		tap = 0;
-		putchar('\n');
+		_putchar('\n');
 		top++;
 	}
 }
