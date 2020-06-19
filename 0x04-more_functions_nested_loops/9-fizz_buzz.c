@@ -15,7 +15,7 @@ int main(void)
 		}
 		else if (counter % 5 == 0 && counter % 3 == 0)
 		{
-			printf("FizzBuzzsss");
+			printf("FizzBuzz");
 		}
 		else if (counter % 5 == 0)
 		{
