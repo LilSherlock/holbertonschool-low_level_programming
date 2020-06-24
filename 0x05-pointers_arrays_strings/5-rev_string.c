@@ -12,12 +12,12 @@ void rev_string(char *s)
 	subLen = len - 1;
 	middleLen = subLen / 2;
 	top = subLen;
-	while (loop < middleLen)
+	while (loop < middleLen + 1)
 	{
 		aux = s[loop];
 		s[loop] = s[top];
-		loop++;
 		s[top] = aux;
+		loop++;
 		top--;
 	}
 }
