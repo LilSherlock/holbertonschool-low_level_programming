@@ -5,18 +5,31 @@
  */
 void print_rev(char *s)
 {
+	int len = _strlen(s);
+
+	len = len - 1;
+	while (s[len] > 0)
+	{
+		_putchar(s[len]);
+		len--;
+	}
+
+	_putchar('\n');
+}
+
+/**
+* _strlen - main
+* @s: char
+* Return: j
+*/
+int _strlen(char *s)
+{
 	int j = 0;
 
 	while (s[j] != '\0')
 	{
 		j++;
 	}
-
-	while (s[j] >= 0)
-	{
-		_putchar(s[j]);
-		j--;
-	}
-
-	_putchar('\n');
+	return (j);
 }
+
