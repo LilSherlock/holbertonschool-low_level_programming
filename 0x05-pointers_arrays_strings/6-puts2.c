@@ -5,9 +5,9 @@
  */
 void puts2(char *str)
 {
-	int x = 0;
+	unsigned int x = 0;
 
-	while (str[x] != '\0')
+	while (str[x])
 	{
 		if (str[x] % 2 == 0)
 		{
