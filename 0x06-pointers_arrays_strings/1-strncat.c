@@ -28,7 +28,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (counter < n)
 	{
-		if (src[counter] < '\0')
+		if (src[counter] == '\0')
 		{
 			return (dest);
 		}
