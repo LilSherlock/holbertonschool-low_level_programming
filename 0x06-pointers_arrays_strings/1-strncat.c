@@ -22,8 +22,9 @@ int _strlen(char *s)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int aLength = _strlen(dest);
 	int counter = 0;
+
+	int aLength = _strlen(dest);
 
 	while (counter < n)
 	{
