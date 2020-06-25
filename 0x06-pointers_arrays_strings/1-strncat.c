@@ -18,6 +18,7 @@ int _strlen(char *s)
  * _strncat - main
  * @dest: char
  * @src: char
+ * @n: int
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
