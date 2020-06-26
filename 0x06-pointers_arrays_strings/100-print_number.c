@@ -35,7 +35,7 @@ void print_number(int n)
 		_putchar(secondDigit + '0');
 		_putchar(n % 10 + '0');
 	}
-	else if (n < 10000)
+	else
 	{
 		morThat(n);
 	}
