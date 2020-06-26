@@ -8,6 +8,10 @@ char *cap_string(char *s)
 {
 	int activador = 0, x = 0;
 
+	if (s[x] >= 'a' && s[x <= 'z'])
+	{
+		activador = 1;
+	}
 	while (s[x] != '\0')
 	{
 		if (activador == 1)
