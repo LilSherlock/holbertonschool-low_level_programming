@@ -9,10 +9,6 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int x = 0, j = 0, sum = 1;
 
-	if (s == NULL)
-	{
-		return (0);
-	}
 	while (accept[x] != '\0')
 	{
 		j = 0;
