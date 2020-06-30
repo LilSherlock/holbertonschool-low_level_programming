@@ -7,12 +7,12 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	int activator = 0;
 	char *temp = accept;
-	int activator = 0, j = 0;
 
-	while (s[j])
+	while (*s)
 	{
-		activator = 0;
+		accept = temp;
 		while (*accept)
 		{
 			if (*s == *accept)
@@ -24,11 +24,9 @@ char *_strpbrk(char *s, char *accept)
 		}
 		if (activator == 1)
 		{
-			j++;
-			continue;
+			return (s);
 		}
-		++s;
-		accept = temp;
+		s++;
 	}
-	return (s);
+	return (0);
 }
