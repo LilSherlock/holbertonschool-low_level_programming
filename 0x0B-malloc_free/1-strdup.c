@@ -25,7 +25,7 @@ char *_strdup(char *str)
 	char *buffer;
 	int length = 0, x = 0;
 
-	if (str == NULL || buffer == NULL)
+	if (str == NULL)
 		return (NULL);
 	length = _strlen(str);
 
