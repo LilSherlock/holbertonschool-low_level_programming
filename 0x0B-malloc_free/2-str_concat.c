@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 	LenB = _strlen(s2);
 	lenA = lenA + LenB;
 
-	buffer = malloc(lenA * sizeof(char));
+	buffer = malloc(lenA * sizeof(char) + 1);
 	if (buffer == NULL)
 		return (NULL);
 	while (x < lenA)
