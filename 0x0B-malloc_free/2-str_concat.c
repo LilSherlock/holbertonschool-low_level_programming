@@ -25,10 +25,10 @@ char *str_concat(char *s1, char *s2)
 	char *buffer;
 	int lenA = 0, LenB = 0, x = 0, check = 0, i = 0;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	lenA = _strlen(s1);
 	LenB = _strlen(s2);
 	lenA = lenA + LenB;
