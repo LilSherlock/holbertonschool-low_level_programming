@@ -28,6 +28,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lenB = _strlen(s2);
 	char *buffer;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
 	if (n >= lenB)
 	{
 		n = lenB;
