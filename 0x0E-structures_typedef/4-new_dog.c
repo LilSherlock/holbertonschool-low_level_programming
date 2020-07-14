@@ -24,33 +24,33 @@ int _strlen(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    unsigned int x, y;
-    dog_t *dog;
-    unsigned int lengA = _strlen(name) + 1;
-    unsigned int lengB = _strlen(owner) + 1;
+	unsigned int x, y;
+	dog_t *dog;
+	unsigned int lengA = _strlen(name) + 1;
+	unsigned int lengB = _strlen(owner) + 1;
 
-    if (name == NULL || owner == NULL)
-        return (NULL);
-    dog = malloc(sizeof(dog_t));
-    if (dog == NULL)
-        return (NULL);
-    dog->name = malloc(sizeof(char) * lengA);
-    dog->owner = malloc(sizeof(char) * lengB);
-    if (dog->name == NULL)
-    {
-        free(dog);
-        return (NULL);
-    }
-    if (dog->owner == NULL)
-    {
-        free(dog->name);
-        free(dog);
-        return (NULL);
-    }
-    for (x = 0; x < lengA; x++)
-        dog->name[x] = name[x];
-    dog->age = age;
-    for (y = 0; y < lengB; y++)
-        dog->owner[y] = owner[y];
-    return (dog);
+	if (name == NULL || owner == NULL)
+		return (NULL);
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
+		return (NULL);
+	dog->name = malloc(sizeof(char) * lengA);
+	dog->owner = malloc(sizeof(char) * lengB);
+	if (dog->name == NULL)
+	{
+		free(dog);
+		return (NULL);
+	}
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
+	for (x = 0; x < lengA; x++)
+		dog->name[x] = name[x];
+	dog->age = age;
+	for (y = 0; y < lengB; y++)
+		dog->owner[y] = owner[y];
+	return (dog);
 }
