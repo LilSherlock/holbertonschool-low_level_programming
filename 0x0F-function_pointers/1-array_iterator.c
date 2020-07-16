@@ -7,13 +7,13 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t x;
+	unsigned int c;
 
-	if (array && size != NULL)
+	if (array && action != NULL)
 	{
-		for (x = 0; x < size; x++)
+		for (c = 0; c < size; c++)
 		{
-			action(array[x]);
+			action(array[c]);
 		}
 	}
 }
