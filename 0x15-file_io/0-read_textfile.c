@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	x = read(fd, buff, letters);
-	if (x == 0)
+	if (x == -1)
 	{
 		free(buff);
 		return (0);
