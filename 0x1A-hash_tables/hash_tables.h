@@ -1,5 +1,9 @@
 #ifndef HOLBY
 #define HOLBY
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -8,9 +12,6 @@
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the List
  */
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 typedef struct hash_node_s
 {
 	char *key;
