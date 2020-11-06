@@ -10,12 +10,13 @@ def island_perimeter(grid):
     for index in range(len(grid)):
         for sub in range(len(grid[index])):
             if grid[index][sub] == 1:
-                if grid[index - 1][sub] == 0:
+                if grid[index - 1][sub] == 0 or  grid[index - 1][sub] == None:
                     counter += 1
                 if grid[index][sub - 1] == 0:
                     counter += 1
                 if grid[index][sub + 1] == 0:
                     counter += 1
-                if grid[index + 1][sub] == 0:
+                if grid[index + 1][sub] == 0 or  grid[index + 1][sub] == None:
                     counter += 1
+                top = False
     return counter
