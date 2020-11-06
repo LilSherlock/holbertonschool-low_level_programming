@@ -16,10 +16,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	@make clean -f 3-Makefile
-	@make oclean -f 3-Makefile
+fclean: clean oclean
 
-re:
-	@make oclean -f 3-Makefile
-	@make all -f 3-Makefile
+re: oclean all
