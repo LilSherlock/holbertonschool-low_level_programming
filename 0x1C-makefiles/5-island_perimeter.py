@@ -8,19 +8,19 @@ def island_perimeter(grid):
     check = True
 
     for index in range(len(grid)):
-        grid[index].append(0)
-        for sub in range(len(grid[index])):
-            copy_sub = sub
-            if grid[index][sub] == 1:
-                if grid[index - 1][sub] == 0:
-                    counter += 1
-                if grid[index][sub - 1] == 0:
-                    counter += 1
+        if len(grid) <= 100 and len(grid[index]) <= 100:
+            grid[index].append(0)
+            for sub in range(len(grid[index])):
+                copy_sub = sub
+                if grid[index][sub] == 1:
+                    if grid[index - 1][sub] == 0:
+                        counter += 1
+                    if grid[index][sub - 1] == 0:
+                        counter += 1
 
-                if grid[index][copy_sub + 1] == 0:
-                    counter += 1
-                if grid[index + 1][sub] == 0:
-                    counter += 1
-            check = True
-        grid[index].pop()
+                    if grid[index][copy_sub + 1] == 0:
+                        counter += 1
+                    if grid[index + 1][sub] == 0:
+                        counter += 1
+            grid[index].pop()
     return counter
