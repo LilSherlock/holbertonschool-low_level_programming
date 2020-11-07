@@ -5,18 +5,22 @@
 def island_perimeter(grid):
     """Returns the perimeter of the island described in grid"""
     counter = 0
-    top = False
+    check = True
 
     for index in range(len(grid)):
+        grid[index].append(0)
         for sub in range(len(grid[index])):
+            copy_sub = sub
             if grid[index][sub] == 1:
-                if grid[index - 1][sub] == 0 or  grid[index - 1][sub] == None:
+                if grid[index - 1][sub] == 0:
                     counter += 1
                 if grid[index][sub - 1] == 0:
                     counter += 1
-                if grid[index][sub + 1] == 0:
+
+                if grid[index][copy_sub + 1] == 0:
                     counter += 1
-                if grid[index + 1][sub] == 0 or  grid[index + 1][sub] == None:
+                if grid[index + 1][sub] == 0:
                     counter += 1
-                top = False
+            check = True
+        grid[index].pop()
     return counter
